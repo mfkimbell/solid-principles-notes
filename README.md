@@ -8,8 +8,14 @@ NO:
 YES:
 <img width="352" alt="Screenshot 2024-08-20 at 10 40 03 AM" src="https://github.com/user-attachments/assets/b97159a9-f722-463a-a932-8ee2d92d49fd">
 
-### Open / Closed Principle
+![image](https://github.com/user-attachments/assets/b7314825-60bd-44eb-a51e-1dfa0735bbbb)
 
+another benefit is that developers can work on different services, so less merge conflicts
+
+### Open / Closed Principle
+open for extension, closed for modificatuon 
+- **extension methods** in C# are a good example of implementing this principle. they add functionality without altering the original file
+- **inheritance** also fits with this since subclasses and extend class functionality without altering the superclass.
 
 ### Liskov Substituion Principle
 
@@ -31,4 +37,15 @@ YES:
 # Singleton
 
 # Factory
+
+# polymorphism 
+
+### overloading
+
+### overwriting
+
+# abstrqction
+
+# encapsulation
+
 
