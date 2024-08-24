@@ -48,6 +48,8 @@ ex: say we have a printer class we need, if we design a Device() interface that 
 
 # Factory
 
+# builder
+
 # polymorphism 
 
 ### overloading
@@ -129,3 +131,4 @@ Interfaces allow you to replace real dependencies with controlled test versions 
 
 This approach simplifies testing, makes your tests more reliable, and ensures that you're only testing one thing at a time.
 
+# class types, static, protecged etc...
