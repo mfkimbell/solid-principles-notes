@@ -136,3 +136,33 @@ public class PayPalPaymentProcessor implements PaymentGateway {
 In this compliant example:
 
 Solution: PaymentProcessor depends on the PaymentGateway abstraction (interface), allowing it to work with any implementation of PaymentGateway (Stripe, PayPal, etc.) without modifying PaymentProcessor itself.
+
+```java
+public class PaymentProcessor {
+    private PaymentGateway stripeGateway;
+    private PaymentGateway paypalGateway;
+
+    // Constructor injection of the available gateways
+    public PaymentProcessor(PaymentGateway stripeGateway, PaymentGateway paypalGateway) {
+        this.stripeGateway = stripeGateway;
+        this.paypalGateway = paypalGateway;
+    }
+
+    public void processPayment(User user, double amount) {
+        PaymentGateway selectedGateway = selectGatewayForUser(user);
+        selectedGateway.charge(user, amount);
+    }
+
+    private PaymentGateway selectGatewayForUser(User user) {
+        // Determine which gateway to use based on the user's preference
+        switch (user.getPreferredPaymentType()) {
+            case "Stripe":
+                return stripeGateway;
+            case "PayPal":
+                return paypalGateway;
+            default:
+                throw new IllegalArgumentException("Unsupported payment type: " + user.getPreferredPaymentType());
+        }
+    }
+}
+```
