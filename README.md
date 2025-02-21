@@ -7,8 +7,11 @@
 * intended to reduce side effects
 * the logic for certain parts of the car need to be encapsulated in a class, such as an Engine() class and a Tire() class. 
 NO:
+
 <img width="351" alt="Screenshot 2024-08-20 at 10 40 20 AM" src="https://github.com/user-attachments/assets/bbe79c59-02a4-4569-825d-177e3750d19d">
+
 YES:
+
 <img width="352" alt="Screenshot 2024-08-20 at 10 40 03 AM" src="https://github.com/user-attachments/assets/b97159a9-f722-463a-a932-8ee2d92d49fd">
 
 * i would need to import the car and tire class if the files were separate. 
